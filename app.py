@@ -1,4 +1,13 @@
-from flask import Flask, url_for
+from flask import Flask, url_for, render_template
+
+name = "Lucheng"
+
+movies = [
+        {'title': 'My neighbor totoro', 'year': '1988'},
+        {'title': 'The pork of music', 'year': '2012'}
+]
+
+
 
 app = Flask(__name__)
 
@@ -6,7 +15,7 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def hello():
-    return '<h1>Hello Totoro!</h1><img src="http://helloflask.com/totoro.gif">'
+    return render_template('index.html', name=name, movies=movies)
 
 
 @app.route('/user/<name>')
