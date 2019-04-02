@@ -1,3 +1,3 @@
 # flask_watchlist
 
-联系来自知乎上面李辉的flask基础教程
+练习来自知乎上面李辉的flask基础教程
